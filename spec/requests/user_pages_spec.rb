@@ -5,9 +5,9 @@ require 'spec_helper'
   subject { page }
 
   describe "signup page" do
-	before { visit signup_path }
+before { visit signup_path }
 
-	it { should have_selector('h1',    text: 'Sign up') }
+it { should have_selector('h1', text: 'Sign up') }
         it { should have_selector('title', text: 'Ruby on Rails Tutorial Sample App | Sign up') }
     end
 
@@ -16,7 +16,7 @@ require 'spec_helper'
 
   # Code to make a user variable
       before { visit user_path(user) }
-     it { should have_selector('h1',    text: user.name) }
+     it { should have_selector('h1', text: user.name) }
      it { should have_selector('title', text: user.name) }
     end
 
@@ -33,7 +33,7 @@ require 'spec_helper'
       end
 
   describe "after submission" do
-	before {click_button submit}
+before {click_button submit}
       it { should have_selector('title', text: 'Sign up') }
       it { should have_content('error') }
       it { should_not have_content('Password digest') }
@@ -42,11 +42,11 @@ require 'spec_helper'
 
 
  describe "with valid information" do
-   before do 
-   fill_in "Name",               with: "Example User"
-   fill_in "Email",              with: "user@example.com"
-   fill_in "Password",           with: "foobar"
-   fill_in "Confirmation",       with: "foobar"
+   before do
+   fill_in "Name", with: "Example User"
+   fill_in "Email", with: "user@example.com"
+   fill_in "Password", with: "foobar"
+   fill_in "Confirmation", with: "foobar"
  end
 
 
@@ -65,4 +65,3 @@ let(:user){ user.find_by_email("user@example.com") }
       end
     end
   end
-

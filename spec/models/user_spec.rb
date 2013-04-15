@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: users
+#
+# id :integer not null, primary key
+# name :string(255)
+# email :string(255)
+# created_at :datetime not null
+# updated_at :datetime not null
+# password_digest :string(255)
+#
+
 require 'spec_helper'
 
 describe User do
@@ -14,8 +26,13 @@ describe User do
   it { should respond_to(:password) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password_confirmation) }
+<<<<<<< HEAD
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
+=======
+  it { should respond_to(:authenticate) }
+  it { should respond_to(:remember_token) }
+>>>>>>> updating-users
   it { should respond_to(:authenticate) }
 
   it { should be_valid }
@@ -111,8 +128,13 @@ foo@bar_baz.com foo@bar+baz.com]
     end
 
    describe "remember token" do
+<<<<<<< HEAD
      before { @user.save }
      it (:remember_token) { should_not be_blank }
+=======
+      before { @user.save }
+      it (:remember_token) { should_not be_blank }
+>>>>>>> updating-users
    end
  end
 end

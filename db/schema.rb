@@ -11,14 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130414145526) do
+=======
+ActiveRecord::Schema.define(:version => 20130414131429) do
+>>>>>>> updating-users
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.boolean  "admin"
+=======
+    t.string   "password_digest"
+    t.string   "string"
+>>>>>>> updating-users
   end
 
 end

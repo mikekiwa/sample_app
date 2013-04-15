@@ -1,15 +1,11 @@
 class UsersController < ApplicationController
    before_filter :signed_in_user, only: [:index, :edit, :update]
    before_filter :correct_user,   only: [:edit, :update]
-<<<<<<< HEAD
    before_filter :admin_user,     only: :destroy
-=======
->>>>>>> updating-users
 
 
    def show
       @user = User.find(params[:id])
-<<<<<<< HEAD
    end
 
    def new
@@ -25,17 +21,6 @@ class UsersController < ApplicationController
    def index
       @users = User.paginate(page: params[:page])
    end
-
-   def index
-      @users = User.all
-   end
-=======
-    end
-
-   def new
-      @user = User.new
-    end
->>>>>>> updating-users
 
    def index
       @users = User.all
@@ -70,7 +55,6 @@ class UsersController < ApplicationController
        store_location
        redirect_to signin_url, notice: "Please sign in." unless signed_in?
      end
-<<<<<<< HEAD
   end
 
    def correct_user
@@ -83,13 +67,3 @@ class UsersController < ApplicationController
       redirect_to(root_path) unless current_user.admin?
    end
 end
-=======
-  end
-
-   def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
-    end
-   end
-  end
->>>>>>> updating-users

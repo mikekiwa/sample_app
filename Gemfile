@@ -3,11 +3,9 @@ source 'https://rubygems.org'
   gem 'bootstrap-sass', '2.1'
   gem 'bcrypt-ruby', '3.0.1'
   gem 'faker', '1.0.1'
-<<<<<<< HEAD
   gem 'will_paginate', '3.0.1'
   gem 'bootstrap-will_paginate', '0.0.6'
-=======
->>>>>>> updating-users
+
  group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'

@@ -5,7 +5,7 @@ source 'https://rubygems.org'
   gem 'faker', '1.0.1'
 <<<<<<< HEAD
   gem 'will_paginate', '3.0.1'
-  gem 'bootstrape-will_paginate', '0.0.6'
+  gem 'bootstrap-will_paginate', '0.0.6'
 =======
 >>>>>>> updating-users
  group :development, :test do

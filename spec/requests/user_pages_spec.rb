@@ -5,7 +5,6 @@ require 'spec_helper'
   subject { page }
 
   describe "index" do
-<<<<<<< HEAD
      
      let(:user) { FactoryGirl.create(:user) }
      before(:each) do
@@ -22,23 +21,11 @@ require 'spec_helper'
      after(:all) { User.delete_all }
      
      it { should have_selector('div.pagination') }
-=======
-     before do
-       sign_in FactoryGirl.create(:user)
-       FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
-       FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
-
-       visit users_path
-     end
-     it { should have_selector('title', text: 'All users') }
-     it { should have_selector('h1', text: 'All users') }
->>>>>>> updating-users
      
      it "should list each user" do
        User.all.each do |user|
           page.should have_selector('li', text: user.name)
        end
-<<<<<<< HEAD
       end
     end
   end
@@ -61,10 +48,6 @@ require 'spec_helper'
         it { should_not have_link('delete', href: user_path(admin)) }
         end
      end
-=======
-    end
-end
->>>>>>> updating-users
 
   describe "signup page" do
     before { visit signup_path }

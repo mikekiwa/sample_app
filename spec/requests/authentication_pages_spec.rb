@@ -50,13 +50,8 @@ describe "Authentication" do
 
    describe "authorization" do
 
-<<<<<<< HEAD
       	 describe "for non-signed-in users" do
            let(:user) { FactoryGirl.create(:user) }
-=======
-      describe "for non-signed-in users" do
-         let(:user) { FactoryGirl.create(:user) }
->>>>>>> updating-users
 
           describe "when attempting to visit a protected page" do
             before do
@@ -66,7 +61,6 @@ describe "Authentication" do
             click_button "Sign in"
           end
 
-<<<<<<< HEAD
          describe "as non-admin user" do
            let(:user) { FactoryGirl.create(:user) }
            let(:non_admin) { FactoryGirl.create(:user) }
@@ -79,8 +73,6 @@ describe "Authentication" do
            end
         end
 
-=======
->>>>>>> updating-users
             describe "in the Users controller" do
         
               describe "visiting the edit page" do

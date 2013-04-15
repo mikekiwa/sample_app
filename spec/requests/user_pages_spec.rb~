@@ -61,7 +61,6 @@ require 'spec_helper'
         it { should_not have_link('delete', href: user_path(admin)) }
         end
      end
-
 =======
     end
 end
@@ -164,8 +163,4 @@ let(:user){ user.find_by_email("user@example.com") }
     end
    end
   end 
-<<<<<<< HEAD
  
-=======
- end
->>>>>>> updating-users

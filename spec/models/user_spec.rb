@@ -26,13 +26,10 @@ describe User do
   it { should respond_to(:password) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password_confirmation) }
-<<<<<<< HEAD
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
-=======
   it { should respond_to(:authenticate) }
   it { should respond_to(:remember_token) }
->>>>>>> updating-users
   it { should respond_to(:authenticate) }
 
   it { should be_valid }
@@ -128,13 +125,12 @@ foo@bar_baz.com foo@bar+baz.com]
     end
 
    describe "remember token" do
-<<<<<<< HEAD
+
      before { @user.save }
      it (:remember_token) { should_not be_blank }
-=======
+
       before { @user.save }
       it (:remember_token) { should_not be_blank }
->>>>>>> updating-users
-   end
+     end
  end
 end

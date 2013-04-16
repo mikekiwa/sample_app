@@ -44,8 +44,8 @@ class UsersController < ApplicationController
 	sign_in @user
 	redirect_to @user
     else
-    render 'edit'
-   end
+        render 'edit'
+    end
  end
 
    private
